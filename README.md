@@ -13,6 +13,22 @@ Prerequisite:
 -  -  S3FullAccess
 -  Attach IAM role to EC2 instance
 Create user to install Ansible & Terraform
+$ sudo useradd ansible
+$ echo "ansible ALL=(ALL) NOPASSWORD:ALL" | sudo tee /etc/sudoers.d/ansible
+$ sudo su ansible
+
+# Terraform Installation
+$ sudo su ansible
+$ sudo yum install wget unzip -y
+$ wget https://releases.hashicorp.com/terraform/0.12.26/terraform_0.12.26_linux_amd64.zip
+$ sudo unzip terraform_0.12.26_linux_amd64.zip -d /usr/local/bin/
+# Export terraform baniary path temporally
+$ export PATH=$PATH:/usr/local/bin
+# Add path permanently for current user, By Exporting path in .bashrc file at the end of the file.
+$ vi .bashrc
+  export PATH="$PATH:/usr/local/bin"
+# source .bashrc to reflect for current session
+$ source ~/.bashrc
 
 # Ansible Installation
 ``` sh
