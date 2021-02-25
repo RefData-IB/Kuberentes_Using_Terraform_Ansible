@@ -1,3 +1,19 @@
+Agenda of this project-------
+Infrastructure automation using Terraform and Kubernetes cluster configuration
+Using Ansible with dynamic inventory.
+
+Terraform, Ansible Installation And setup in AWS EC2 RedHat Instance
+
+Prerequisite:
+- AWS Account
+- Create RedHat EC2 instance
+- Create IAM role with required policies
+-  -  VPCFullAccess
+-  -  EC2FullAccess
+-  -  S3FullAccess
+-  Attach IAM role to EC2 instance
+Create user to install Ansible & Terraform
+
 # Ansible Installation
 ``` sh
 $ sudo yum install python3 -y
